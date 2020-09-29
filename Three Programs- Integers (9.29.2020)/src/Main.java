@@ -34,7 +34,7 @@ public class Main {
         System.out.println("Third Number: ");
         num3 = iIn.nextInt();
 
-        System.out.println("RESULT: " + (num1 * num2 * num3)/3);
+        System.out.println("RESULT: " + (int)(num1 * num2 * num3)/3);
     }
 
     public static void Reverse() {
