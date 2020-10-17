@@ -1,0 +1,42 @@
+a. Unit 1: Primitive Types 
+    -i. Uses System.out.print() or System.out.println(). 
+    -ii. Uses string literals. 
+    -iii. Uses the primitive types int, double, and boolean. 
+    -iv. Uses reference types. 
+    -v. Uses a final variable. 
+    -vi. Uses at least one arithmetic operation (+, -, *, /, %). 
+    -vii. Uses casting. 
+    viii. Uses Integer.MIN_VALUE or Integer.MAX_VALUE. 
+b. Unit 2: Using Objects 
+    -i. Uses objects with private attributes (fields, properties). 
+    -ii. Uses constructors with formal parameters. 
+    -iii. Passes actual parameters. 
+    -iv. Uses overloaded constructors. 
+    -v. Constructs objects with the keyword new. 
+    -vi. Uses the keyword null. 
+    -vii. Includes at least one zero-parameter method. 
+    -viii. Uses at least one non-static method. 
+    -ix. Uses at least one void method (excluding the main method). 
+    -x. Includes methods with parameters. 
+    -xi. Uses method overloading. 
+    -xii. Uses non-void methods. 
+    -xiii. Concatenates Strings. 
+    -xiv. Concatenates Strings and primitives. 
+    -xv. Uses an escape sequence ( \”, \\, or \n). 
+    -xvi. Includes a toString() method. 
+    -xvii. Uses at least one of the following String methods: 
+        1. length() 
+        2. substring() 
+        3. indexOf() 
+        4. equals() 
+        5. compareTo() 
+    -xviii. Uses at least one static method (excluding the main method). 
+    -xix. Uses the Math methods: 
+        1. abs() 
+        2. pow() 
+        3. sqrt() 
+        4. random() 
+c. Unit 3: Boolean Expressions and if Statements 
+    -i. Uses at least one relational operator (==, !=, >, <, >=, <=) 
+    -ii. Uses if statements. 
+    -iii. Uses else statements. 
