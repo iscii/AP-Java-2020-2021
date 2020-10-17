@@ -6,7 +6,7 @@ a. Unit 1: Primitive Types
     -v. Uses a final variable. 
     -vi. Uses at least one arithmetic operation (+, -, *, /, %). 
     -vii. Uses casting. 
-    viii. Uses Integer.MIN_VALUE or Integer.MAX_VALUE. 
+    -viii. Uses Integer.MIN_VALUE or Integer.MAX_VALUE. 
 b. Unit 2: Using Objects 
     -i. Uses objects with private attributes (fields, properties). 
     -ii. Uses constructors with formal parameters. 
