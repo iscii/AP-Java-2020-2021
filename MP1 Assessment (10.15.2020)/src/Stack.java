@@ -65,6 +65,7 @@ public class Stack{
         System.out.println(rand(1, 6));
     }
     public void guessgame(Scanner s) {
+        //maybe turn it into a hot/cold game with 4 tries (binary search)
         int input;
         int num;
 
@@ -90,7 +91,6 @@ public class Stack{
                 op = input.substring(i, i+1);
         }
 
-        System.out.println(op);
         try {
             nums = input.split("\\"+op); //+ and * must be escaped since they are used in regex
         }
