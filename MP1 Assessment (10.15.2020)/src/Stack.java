@@ -92,6 +92,7 @@ public class Stack{
         }
 
         try {
+            if(op == null) throw new Exception("hi, this is a filler exception to get to the catch block");
             nums = input.split("\\"+op); //+ and * must be escaped since they are used in regex
         }
         catch (Exception e) {
@@ -141,13 +142,6 @@ public class Stack{
         System.out.println("Smallest number: [" + smallest + "]");
     }
 
-    /*
-    public void random(Scanner s) {
-        int input;
-        System.out.print("I'll tell you a number from 1 to ");
-        input = s.nextInt();
-        System.out.println("My number is [" + rand(1, input + 1) + "]");
-    }*/
         //utility
     private int rand(int l, int u) {
         //return a random number between l, inclusive, and u, exclusive
