@@ -2,8 +2,12 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) throws Exception {
-        Stack stack;
         Scanner s = new Scanner(System.in);
+        init(s);
+        s.close();
+    }
+    public static void init(Scanner s) {
+        Stack stack;
         int age = 0;
         String name = null;
         String input;
@@ -23,6 +27,5 @@ public class Main {
             stack = new Stack(age, name);
 
         stack.run();
-        s.close();
     }
 }
