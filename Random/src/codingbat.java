@@ -11,4 +11,6 @@ public class codingbat {
         }
         return false;
     }
+    public void test() {
+    }
 }

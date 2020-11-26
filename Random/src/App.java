@@ -1,7 +1,6 @@
 public class App {
 
     public static void main(String[] args) throws Exception {
-        test.nov17();
     }
 
     public static void codingBat(String str) {
