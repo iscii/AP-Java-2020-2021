@@ -1,6 +1,66 @@
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Scanner;
+
 public class App {
 
     public static void main(String[] args) throws Exception {
+        test2();
+    }
+
+    public static void test2() {
+        int[] arr = { 10, 20, 30, 40, 50 };
+        for (int x = 1; x < arr.length - 1; x++) {
+            arr[x + 1] = arr[x] + arr[x + 1];
+        }
+        System.out.println(Arrays.toString(arr));
+    }
+
+    public static int checkString(String[] arr) {
+        int count = 0;
+        for (int k = 0; k < arr.length; k++) {
+            if (arr[k].length() >= 3) {
+                count++;
+            }
+        }
+        return count;
+    }
+
+    public static String[] arraylisttest() {
+        ArrayList<String> t = new ArrayList<String>();
+        t.add("hi");
+        String[] s = { "hi" };
+        System.out.println(s);
+        return t.toArray(new String[t.size()]);
+    }
+
+    public static void xPrime() {
+        Scanner s = new Scanner(System.in);
+        int g;
+        loop1: while (true) {
+            System.out.print("[0] To Exit\nPrime? ");
+            g = s.nextInt();
+            if (g == 0)
+                break;
+            // if prime
+            if (g == 1) {
+                System.out.println("no");
+                continue loop1;
+            }
+            if (g == 2) {
+                System.out.println("yes");
+                continue loop1;
+            }
+            for (int i = 2; i < g / 2; i++) {
+                if (i != g && i % g != 1 && g % i == 0) {
+                    System.out.println("no");
+                    continue loop1;
+                }
+            }
+            System.out.println("yes");
+        }
+        System.out.println("Exited");
+        s.close();
     }
 
     public static void codingBat(String str) {
@@ -13,7 +73,7 @@ public class App {
     }
 
     public static void albertio() {
-        
+
     }
 
     public static void compareStrings() {
