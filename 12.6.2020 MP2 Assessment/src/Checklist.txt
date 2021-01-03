@@ -1,0 +1,43 @@
+Unit 4: Iteration
+>i. Contains no infinite loops.
+>ii. Includes a return statement inside a loop. //object array
+>iii. Uses a for loop and/or while loop - include in the comments why for/while is better decision.
+>iv. Contains no “off-by-one” errors. [array out of bounds]
+>v. Uses nested iteration (i.e. loops within loops).
+>vi. Uses statement execution counts.
+
+Unit 5: Writing Classes
+>i. Uses only public classes.
+>ii. Uses only private attributes to encapsulate data.
+>iii. Uses only public constructors.
+>iv. Uses at least one public and at least one private method.
+>v. Includes all necessary accessor and mutator methods.
+>vi. Includes a constructor with an object as one of its parameters.
+>vii. Includes a class with instance variables but no constructor.
+>viii. Includes Javadoc comments (i.e. /** */).
+>ix. Includes at least one precondition and one postcondition.
+>x. Includes non-void methods.
+>xi. Includes at least one method that returns an object other than a String.
+>xii. Includes a toString method and prints an object.
+>xiii. Includes a void method other than the main method.
+>xiv. Includes a static method other than the main method.
+>xv. Includes a method that alters a static variable in a different class. -> public static setter
+>xvi. Uses the this keyword.
+>xvii. Is reliable.
+>xviii. Creates no legal issues nor intellectual property concerns.
+
+Unit 6: Arrays
+>i. Uses an array of primitive data.
+>ii. Uses an array of object references.
+>iii. Uses an initializer list to create an array.
+>iv. Uses iteration to traverse an array.
+>v. Uses an enhanced for loop.
+>vi. Determines the minimum and maximum values in an array.
+>vii. Computes the sum, average, and mode of an array.
+>viii. Determines if at least one element of an array has a particular property. //object array
+>ix. Determines if all elements of an array have a particular property. //object array
+>x. Accesses all consecutive pairs of elements in an array.
+>xi. Determines the presence or absence of duplicate elements.
+>xii. Determines the number of elements meeting specific criteria. //object array
+>xiii. Shifts elements of an array left or right.
+>xiv. Reverses the order of the elements of an array.
