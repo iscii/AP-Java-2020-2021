@@ -1,11 +1,14 @@
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 import java.util.Scanner;
 
 public class App {
 
     public static void main(String[] args) throws Exception {
-        test2();
+        String a = "a";
+        String c = "c";
+        System.out.println(a==c);
     }
 
     public static void test2() {
