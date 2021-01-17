@@ -1,14 +1,100 @@
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 
 public class App {
+    final static String[] vows = { "a", "e", "i", "o", "u" };
 
     public static void main(String[] args) throws Exception {
-        String a = "a";
-        String c = "c";
-        System.out.println(a==c);
+
+    }
+
+    public static void arrayListAddRemove() {
+        ArrayList<Integer> a = new ArrayList<Integer>(Arrays.asList(8, 8, 4, 3, 3));
+        //removes item on right side, add to left. slides everything else right.
+        a.add(2, a.remove(4));
+        System.out.println(a);
+        a.add(1, a.remove(3));
+        System.out.println(a);
+        //removes item on left side, add to right. slides everything else left.
+        a.add(4, a.remove(2));
+        System.out.println(a);
+        a.add(3, a.remove(1));
+        System.out.println(a);
+        //when using remove in add, it'll keep the array size and, at the index to add, shift everything based on where you removed the element/the empty slot. 
+        //*So if you remove an element at an index higher than the new index you're adding it to, it'll shift everything from that new index right.
+        //*if you remove an element at an inedx lower than the new index you're adding it to, it'll shift everything from that new index left.
+    }
+
+    public static void manipulate(List<String> animals) {
+        /* private static List<String> animals = new ArrayList<String>(
+            Arrays.asList("bear", "zebra", "bass", "cat", "koala", "baboon")); */
+        for (int k = animals.size() - 1; k > 0; k--) {
+            if (animals.get(k).substring(0, 1).equals("b")) {
+                animals.add(animals.size() - k, animals.remove(k));
+                System.out.println(animals);
+            }
+        }
+    }
+
+    public static void removeElement(ArrayList<Integer> data, int target) {
+        /*
+         * ArrayList<Integer> a = new ArrayList<Integer>(Arrays.asList(8, 8, 4, 3, 3,
+         * 6)); removeElement(a, 3);
+         */
+        for (int j = 0; j < data.size(); j++) {
+            if (data.get(j).equals(target)) {
+                data.remove(j);
+            }
+        }
+        System.out.println(data);
+    }
+
+    public static void insert(int val, ArrayList<Integer> numList) {
+        int index = 0;
+        while (val > numList.get(index)) {
+            index++;
+        }
+        numList.add(index, val);
+        System.out.println(numList);
+    }
+
+    public static ArrayList<String> removeVowelWords(ArrayList<String> arr) {
+        ArrayList<String> n = new ArrayList<String>();
+        loop1: for (String s : arr) {
+            for (String c : vows)
+                if (s.contains(c))
+                    continue loop1;
+            n.add(s);
+        }
+        return n;
+    }
+
+    public static String scrambleWord(String word) {
+        if (word.length() < 2)
+            return word;
+        String a = "";
+        for (int i = 0; i < word.length() - 1; i++) {
+            if (word.substring(i, i + 1).equals("A") && !word.substring(i + 1, i + 2).equals("A")) {
+                a += word.substring(i + 1, i + 2) + "A";
+                i++;
+            } else {
+                a += word.substring(i, i + 1);
+                if (i == word.length() - 2)
+                    a += word.substring(i + 1, i + 2);
+            }
+        }
+        return a;
+    }
+
+    public static void scrambleOrRemove(List<String> wordList) {
+        List<String> n = new ArrayList<String>();
+        for (String s : wordList)
+            if (s.substring(0, s.length() - 1).contains("A"))
+                n.add(scrambleWord(s));
+        System.out.println(n);
     }
 
     public static void test2() {
