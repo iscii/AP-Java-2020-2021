@@ -1,0 +1,151 @@
+-----------------------
+Your turn
+Discard:<red 7>
+Your hand: 7 [1] [sorted by color]
+-----------------------
+Pick an index:3
+Color:
+=======================
+invalid move
+=======================
+
+
+-----------------------
+Your turn
+Discard:<red 7>
+Your hand: 7
+
+> reds: [0]<red 3> [1]<red 1> 
+> yellows: [2]<yellow 9> [3]<yellow 5> [4]<yellow 5> 
+> greens: [5]<green reverse> [6]<green 8> 
+-----------------------
+Pick an index: 3
+
+_______________________
+Player 1's turn
+Discard:<red wild>
+Player hand: 7
+_______________________
+
+=======================
+Player 1 played ""
+Wildcard
+=======================
+
+
+
+
+
+
+
+static amtAdd;
+static Card discard;
+
+main(){
+    int turn=randomMath;
+    while(checkGame())
+        play(turn)
+    "player x wins"
+}
+
+play(int turn ){
+    if(amtAdd>0){
+        //check if amtAdd>0, and check if you have any valid moves
+        checkCard();
+        //if have no valid moves add all the amtAdd to hand
+        amdadd=0
+    }
+    else{
+        //check if valid move left (else draw for robot)
+        if(turn==you)
+            //get player index;    
+        else
+            aiPlay()
+        //check if player press enter or do something stupid, draw for player
+        //check index if(index)||>size||randomstuff{
+        checkCard(hand[idex]);
+        print(discardCard)
+    }
+}
+
+mextTurn(mod){
+    turn+=mod;
+    if(turn<0)
+        turn=2;
+    if(turn>2)
+        turn=0;
+    System.out.println(players[turn]);
+}
+
+aiplay() {
+    //get index for ai's play
+}
+
+checkCard(Card c) {
+    switch(c.getType()){
+        case skip: skip(); break;
+        case reverse: reverse(); break;
+        case drawtwo: drawtwo(); break;
+        case drawfour: drawfour(); break;
+        case wild: wild(); break;
+        default: playcard(); break;
+    }
+}
+
+playcard() {
+    //play a card
+    discard=played
+    nextTurn(1);
+}
+
+skip() {
+    nextTurn(2);
+    discard=played
+}
+
+reverse() {
+    nextTurn(-1);
+    discard=played
+}
+
+drawtwo(){
+    amtAdd+=2;
+    discard=played
+    nextTurn(1);
+}
+
+drawfour(){
+    //change color directly
+    amtAdd+=4;
+    discard=played
+    nextTurn(1);
+}
+
+wild() {
+    //change color of the wildcard directly
+    discard=played
+    nextTurn(1);
+}
+
+public static boolean hasMove(Card c1, Hand h1, boolean choice){
+    if(choice){
+        for(Card c2:h1.getHand()){
+            if(c2.getType().equals("drawtwo")||c2.getType().equals("drawfour"))
+                return true;
+        }
+    }
+    else{
+        for(Card c2:h1.getHand()){
+            if(c2.getColor().equals(c1.getColor())||c2.getType().equals(c1.getType())||c2.getColor().equals("rainbow"))
+                return true;
+        }   
+    }
+    return false;
+}
+
+boolean checkGame() {
+    //for every player, check their hand{   
+    //if any hand is empty return false
+    }
+    return true
+}

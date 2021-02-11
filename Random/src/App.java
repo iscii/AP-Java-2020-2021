@@ -1,4 +1,3 @@
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -8,29 +7,63 @@ public class App {
     final static String[] vows = { "a", "e", "i", "o", "u" };
 
     public static void main(String[] args) throws Exception {
+        String[] used = {"harta", "hartm", "harty"};
+        UserName johnSmith = new UserName("john", "smith");
+        System.out.println(johnSmith.getPossibleNames());
+        UserName maryHart = new UserName("mary", "hart");
+        System.out.println(maryHart.getPossibleNames());
+        maryHart.setAvailableUserNames(used);
+        System.out.println(maryHart.getPossibleNames());
 
+        UserName dorothyVaughan = new UserName("dorothy", "vaughan");
+        System.out.println(dorothyVaughan.getPossibleNames());
+        used = new String[]{"vaughand","vaughando"};
+        dorothyVaughan.setAvailableUserNames(used);
+        System.out.println(dorothyVaughan.getPossibleNames());
+    }
+
+    public static int[] post4(int[] nums) {
+        int idx = 0;
+        for (int i = nums.length - 1; i >= 0; i--) {
+            System.out.println(i);
+            if (nums[i] == 4) {
+                idx = i+1;
+                break;
+            }
+        }
+        int[] a = new int[nums.length - idx];
+        for (int i = 0; i < a.length; i++) {
+            a[i] = nums[idx];
+            idx++;
+        }
+        return a;
     }
 
     public static void arrayListAddRemove() {
         ArrayList<Integer> a = new ArrayList<Integer>(Arrays.asList(8, 8, 4, 3, 3));
-        //removes item on right side, add to left. slides everything else right.
+        // removes item on right side, add to left. slides everything else right.
         a.add(2, a.remove(4));
         System.out.println(a);
         a.add(1, a.remove(3));
         System.out.println(a);
-        //removes item on left side, add to right. slides everything else left.
+        // removes item on left side, add to right. slides everything else left.
         a.add(4, a.remove(2));
         System.out.println(a);
         a.add(3, a.remove(1));
         System.out.println(a);
-        //when using remove in add, it'll keep the array size and, at the index to add, shift everything based on where you removed the element/the empty slot. 
-        //*So if you remove an element at an index higher than the new index you're adding it to, it'll shift everything from that new index right.
-        //*if you remove an element at an inedx lower than the new index you're adding it to, it'll shift everything from that new index left.
+        // when using remove in add, it'll keep the array size and, at the index to add,
+        // shift everything based on where you removed the element/the empty slot.
+        // *So if you remove an element at an index higher than the new index you're
+        // adding it to, it'll shift everything from that new index right.
+        // *if you remove an element at an inedx lower than the new index you're adding
+        // it to, it'll shift everything from that new index left.
     }
 
     public static void manipulate(List<String> animals) {
-        /* private static List<String> animals = new ArrayList<String>(
-            Arrays.asList("bear", "zebra", "bass", "cat", "koala", "baboon")); */
+        /*
+         * private static List<String> animals = new ArrayList<String>(
+         * Arrays.asList("bear", "zebra", "bass", "cat", "koala", "baboon"));
+         */
         for (int k = animals.size() - 1; k > 0; k--) {
             if (animals.get(k).substring(0, 1).equals("b")) {
                 animals.add(animals.size() - k, animals.remove(k));
