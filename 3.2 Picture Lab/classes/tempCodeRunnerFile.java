@@ -1,2 +1,2 @@
-
-    //testZeroBlue();
+.jpg");
+    temple.explore();
