@@ -7,19 +7,8 @@ public class App {
     final static String[] vows = { "a", "e", "i", "o", "u" };
 
     public static void main(String[] args) throws Exception {
-        String[] used = {"harta", "hartm", "harty"};
-        UserName johnSmith = new UserName("john", "smith");
-        System.out.println(johnSmith.getPossibleNames());
-        UserName maryHart = new UserName("mary", "hart");
-        System.out.println(maryHart.getPossibleNames());
-        maryHart.setAvailableUserNames(used);
-        System.out.println(maryHart.getPossibleNames());
-
-        UserName dorothyVaughan = new UserName("dorothy", "vaughan");
-        System.out.println(dorothyVaughan.getPossibleNames());
-        used = new String[]{"vaughand","vaughando"};
-        dorothyVaughan.setAvailableUserNames(used);
-        System.out.println(dorothyVaughan.getPossibleNames());
+        char[] a = new char[2];
+        System.out.println(Arrays.toString(a));
     }
 
     public static int[] post4(int[] nums) {

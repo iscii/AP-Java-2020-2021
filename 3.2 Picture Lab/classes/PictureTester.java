@@ -40,7 +40,6 @@ public class PictureTester
 
   public static void testFixUnderwater(){
     Picture beach = new Picture("water.jpg");
-    beach.explore();
     beach.fixUnderWater();
     beach.explore();
   }
@@ -115,6 +114,21 @@ public class PictureTester
     swan.edgeDetection(10);
     swan.explore();
   }
+
+  public static void testCopy()
+  {
+    Picture swan = new Picture("swan.jpg");
+    Picture koala = new Picture("koala.jpg");
+    swan.copy(koala, 50, 50, 100, 100);
+    swan.explore();
+  }
+
+  public static void testMyCollage()
+  {
+    Picture a = new Picture("5.png");
+    a.myCollage();
+    a.explore();
+  }
   
   /** Main method for testing.  Every class can have a main
     * method in Java */
@@ -136,9 +150,9 @@ public class PictureTester
     //testMirrorHorizontalBotToTop();
     //testMirrorTemple();
     //testMirrorArms();
-    testMirrorGull();
+    //testMirrorGull();
     //testMirrorDiagonal();
-    //testCollage();
+    testMyCollage();
     //testCopy();
     //testEdgeDetection();
     //testEdgeDetection2();
